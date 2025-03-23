@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ student.name }} ({{ student.roll_number }})</h1>
+
+        <h3>Grades:</h3>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            {% for grade in grades %}
+            <tr>
+                <td>{{ grade.subject }}</td>
+                <td>{{ grade.grade }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+
+        <h3>Average Grade: {{ average_grade }}</h3>
+
+        <!-- Back Button -->
+        <a href="{{ url_for('home') }}" class="add-btn">🔙 Back to Student List</a>
+    </div>
+</body>
+</html>
