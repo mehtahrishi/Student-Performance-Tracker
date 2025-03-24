@@ -8,11 +8,6 @@ __pycache__/
 venv/
 env/
 
-# Ignore instance and SQLite database files
-instance/
-*.sqlite3
-*.db
-
 # Ignore logs and cache
 logs/
 *.log
