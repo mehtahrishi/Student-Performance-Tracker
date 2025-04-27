@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1>Add Student</h1>
+        <form action="{{ url_for('add_student') }}" method="POST">
+            <input type="text" name="name" placeholder="Student Name" required>
+            <input type="text" name="roll_number" placeholder="Roll Number" required>
+
+            <h3>Assign Grades:</h3>
+            <input type="number" name="math" placeholder="Math Grade" min="0" max="100">
+            <input type="number" name="science" placeholder="Science Grade" min="0" max="100">
+            <input type="number" name="english" placeholder="English Grade" min="0" max="100">
+
+            <button type="submit">➕ Add Student</button>
+        </form>
+
+        <!-- Back Button -->
+        <a href="{{ url_for('home') }}" class="add-btn">🔙 Back to Student List</a>
+    </div>
+</body>
+</html>
